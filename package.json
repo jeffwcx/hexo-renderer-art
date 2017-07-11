@@ -1,6 +1,6 @@
 {
   "name": "hexo-renderer-art-template",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Add art-template support for hexo",
   "main": "index.js",
   "directories": {
