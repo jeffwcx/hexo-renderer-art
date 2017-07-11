@@ -21,7 +21,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    
+    "url": "https://github.com/jeffwcx/hexo-renderer-art.git"
   },
   "devDependencies": {
     "blanket": "^1.2.3",
