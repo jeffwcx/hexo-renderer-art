@@ -1,13 +1,13 @@
 const expect = require('chai').expect;
 const fs = require('fs');
 const path = require('path');
+const art = require('../lib/renderer');
 
 function pathResolve(relative) {
   return path.join(__dirname, relative);
 }
 
 describe('art-template renderer', () => {
-  const art = require('../lib/renderer');
   
   // standard grammer
   it('standard', () => {
@@ -45,5 +45,13 @@ describe('art-template renderer', () => {
   it('extend', () => {
     const result = art.template(pathResolve('./target.art'), { title: 'title', content: 'content' });
     expect(result).to.eq(fs.readFileSync(pathResolve('./result.html'), 'utf8'));
+  });
+
+  // compile
+  it('compile', () => {
+    const template = '{{name}}';
+    const func = art.compile({ text: template });
+    const result = func({ name: 'jeff' });
+    expect(result).to.eq('jeff');
   });
 });
