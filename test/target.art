@@ -1,0 +1,5 @@
+{{extend './layout.art'}}
+{{block 'title'}}{{title}}{{/block}}
+{{block 'content'}}
+<p>{{content}}</p>
+{{/block}}

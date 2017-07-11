@@ -1,2 +1,8 @@
 # hexo-renderer-art
-art-template renderer for hexo
+
+Add support for art-template
+
+# Install
+```
+npm i -D hexo-renderer-art
+```
